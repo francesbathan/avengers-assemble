@@ -1,0 +1,131 @@
+<html:<!DOCTYPE html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Avengers Assemble</title>
+      <style>
+      * {
+          margin: 20px;
+          padding: 0px;
+      }
+      body {
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+          background: url("")
+      }
+      h1 {
+          color: blueviolet;
+          text-align: center;
+          margin: 5px auto;
+      }
+      p {
+          text-align: center;
+      }
+      .deadAvengers {
+          color: red;
+      }
+      #hide, #show, .append {
+          display: block;
+          text-align: center;
+          padding: 5px;
+          margin: 10px auto;
+      }
+      /* #show {
+          display: block;
+          text-align: center;
+          padding: 5px;
+          margin: 0 auto;
+      } */
+      #mylink, h3, h2 {
+          text-align: center;
+          display: block;
+          color: navy;
+      }
+      .result {
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+      }
+
+    </style>
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript">
+       $(document).ready(function() {
+
+           alert('You now have all the infinity stones!');
+
+           $('a').click(function() {
+               alert('I AM IRON MAN. (YOU DIED.)');
+           })
+         
+           $('#antMan').hide();
+
+           $('#endGame').hide();
+
+           $('#hide').click(function (){
+               $('.deadAvengers').hide();
+           })
+
+           $('#hide').click(function (){
+               $('#antMan').show();
+           })
+
+           $('#show').click(function() {
+               $('.deadAvengers').show();
+           })
+
+           $('h3').hover(function() {
+               $('h3').text('You found Iron Man.');
+           },function() {alert('You should leave. I have a life here.');
+           })
+           
+           $('#endGameTitle').hover(function() {
+               $('#endGame').show();
+           })
+           
+           $('.append').click(function() {
+               $('.result').append('<h4>Iron Man creates a time machine for everyone to go back and collect the stones to form a new infinity gauntlet.</h4>');
+           })
+           
+           $('button').click(function() {
+             $('button').css('background-color', 'lightyellow');
+           })
+       })
+        </script>
+    </head>
+
+  <body>
+    <p>INFINITY WAR</p>
+    <h1>You are Thanos.</h1>
+    <button id='hide'>Click to snap the avengers out of existence</button>
+  <div class='deadAvengers'>
+      <p class='deadAvengers'>Spiderman</p>
+      <p class='deadAvengers'>Black Panther</p>
+      <p class='deadAvengers'>Doctor Strange</p>
+      <p class='deadAvengers'>Star Lord</p>
+      <p class='deadAvengers'>Scarlet Witch</p>
+      <p class='deadAvengers'>Nick Fury</p>
+      <p class='deadAvengers'>Groot</p>
+      <p class='deadAvengers'>Wasp</p>
+      <p class='deadAvengers'>Falcon</p>
+      <p class='deadAvengers'>Winter Soldier</p>
+      <p class='deadAvengers'>Drax</p>
+      <p class='deadAvengers'>Shuri</p>
+  </div>
+
+  <p id='antMan'>Scott, You have found the remaining Avengers. GO TO THE ENDGAME.</p>
+  <a id='mylink' href='https://www.marvel.com/teams-and-groups/avengers'>Find the other Avengers here, but you know what will happen if you do.</a>
+  <p>----------------------------------------------</p>
+  <p id="endGameTitle">ENDGAME</p>
+  <div id="endGame">
+      <h2>You are Cap.</h2>
+      <h3>Lakeside cabin in the middle of nowhere</h3>
+      <button class='append'>We need to work together.</button>
+      <div class='result'></div>
+      <button id='show'>Click to snap the new infinity gauntlet and bring everyone back</button>
+      <a id='ironMan' href='https://www.youtube.com/watch?v=3r8dJYllCAU'>Click if you are Iron Man.</a>
+  </div>
+    </body>
+
+</html>
